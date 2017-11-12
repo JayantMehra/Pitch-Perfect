@@ -10,12 +10,36 @@ import UIKit
 
 class PlaySoundsViewController: UIViewController {
     
+    @IBOutlet weak var slowButton: UIButton!
+    @IBOutlet weak var fastButton: UIButton!
+    @IBOutlet weak var highPitchButton: UIButton!
+    @IBOutlet weak var lowPitchButton: UIButton!
+    @IBOutlet weak var echoButton: UIButton!
+    @IBOutlet weak var reverbButton: UIButton!
+    
+    @IBOutlet weak var stopButton: UIButton!
+    
     var recordedAudioURL: URL!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        slowButton.contentMode = .center
+        slowButton.imageView?.contentMode = .scaleAspectFit
+        
+        fastButton.contentMode = .center
+        fastButton.imageView?.contentMode = .scaleAspectFit
+        
+        highPitchButton.contentMode = .center
+        highPitchButton.imageView?.contentMode = .scaleAspectFit
+        
+        lowPitchButton.contentMode = .center
+        lowPitchButton.imageView?.contentMode = .scaleAspectFit
+        
+        echoButton.contentMode = .center
+        echoButton.imageView?.contentMode = .scaleAspectFit
+        
+        reverbButton.contentMode = .center
+        reverbButton.imageView?.contentMode = .scaleAspectFit
     }
 
     override func didReceiveMemoryWarning() {
