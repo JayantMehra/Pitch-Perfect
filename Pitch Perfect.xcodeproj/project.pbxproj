@@ -15,6 +15,7 @@
 		99483DF71FB5E6F70072A218 /* Pitch_PerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99483DF61FB5E6F70072A218 /* Pitch_PerfectTests.swift */; };
 		99483E021FB5E6F70072A218 /* Pitch_PerfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99483E011FB5E6F70072A218 /* Pitch_PerfectUITests.swift */; };
 		99B6657F1FB7B4CB00E6BB38 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B6657E1FB7B4CB00E6BB38 /* PlaySoundsViewController.swift */; };
+		99B665811FB7CC2400E6BB38 /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B665801FB7CC2400E6BB38 /* PlaySoundsViewController+Audio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		99483E011FB5E6F70072A218 /* Pitch_PerfectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_PerfectUITests.swift; sourceTree = "<group>"; };
 		99483E031FB5E6F70072A218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99B6657E1FB7B4CB00E6BB38 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		99B665801FB7CC2400E6BB38 /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				99483DEA1FB5E6F70072A218 /* LaunchScreen.storyboard */,
 				99483DED1FB5E6F70072A218 /* Info.plist */,
 				99B6657E1FB7B4CB00E6BB38 /* PlaySoundsViewController.swift */,
+				99B665801FB7CC2400E6BB38 /* PlaySoundsViewController+Audio.swift */,
 			);
 			path = "Pitch Perfect";
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99483DE41FB5E6F70072A218 /* RecordSoundsViewController.swift in Sources */,
+				99B665811FB7CC2400E6BB38 /* PlaySoundsViewController+Audio.swift in Sources */,
 				99B6657F1FB7B4CB00E6BB38 /* PlaySoundsViewController.swift in Sources */,
 				99483DE21FB5E6F70072A218 /* AppDelegate.swift in Sources */,
 			);

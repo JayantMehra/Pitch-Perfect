@@ -114,7 +114,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         audioPlayerNode.play()
     }
     
-    func stopAudio() {
+    @objc func stopAudio() {
         
         if let audioPlayerNode = audioPlayerNode {
             audioPlayerNode.stop()
@@ -154,10 +154,10 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     }
     
     func setPlayButtonsEnabled(_ enabled: Bool) {
-        snailButton.isEnabled = enabled
-        chipmunkButton.isEnabled = enabled
-        rabbitButton.isEnabled = enabled
-        vaderButton.isEnabled = enabled
+        slowButton.isEnabled = enabled
+        highPitchButton.isEnabled = enabled
+        fastButton.isEnabled = enabled
+        lowPitchButton.isEnabled = enabled
         echoButton.isEnabled = enabled
         reverbButton.isEnabled = enabled
     }

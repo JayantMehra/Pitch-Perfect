@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
@@ -20,9 +21,22 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     
     var recordedAudioURL: URL!
+    var audioFile:AVAudioFile!
+    var audioEngine:AVAudioEngine!
+    var audioPlayerNode: AVAudioPlayerNode!
+    var stopTimer: Timer!
+    
+    
+    //  Connects the button to its tags
+    enum ButtonType: Int {
+        case slow = 0, fast, highPitch, lowPitch, echo, reverb
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAudio()  // To setup AVAudioEngine
+        
+        //  Prevents the buttons from stretching
         slowButton.contentMode = .center
         slowButton.imageView?.contentMode = .scaleAspectFit
         
@@ -41,21 +55,34 @@ class PlaySoundsViewController: UIViewController {
         reverbButton.contentMode = .center
         reverbButton.imageView?.contentMode = .scaleAspectFit
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureUI(.notPlaying)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func playSoundForButton(_sender: UIButton) {
+        switch(ButtonType(rawValue: _sender.tag)!) {
+            case .slow:
+                playSound(rate: 0.5)
+            case .fast:
+                playSound(rate: 1.5)
+            case .highPitch:
+                playSound(pitch: 1000)
+            case .lowPitch:
+                playSound(pitch: -1000)
+            case .echo:
+                playSound(echo: true)
+            case .reverb:
+                playSound(reverb: true)
+        }
+        
+        configureUI(.playing)
     }
-    */
+    
+    
+    @IBAction func stopButtonPressed(_sender: UIButton) {
+        stopAudio()
+    }
 
 }
